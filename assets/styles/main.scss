@@ -1,0 +1,26 @@
+*{
+ margin:0;
+ padding:0;
+ border:0;
+ user-select:none;
+ box-sizing:border-box;
+ text-decoration:none;
+ font-family: Sora, sans-serif;
+}
+
+@font-face {
+    font-family: Sora;
+    src: url('../fonts/Sora/Sora-Variable.ttf');
+}
+
+html{
+    background-color: rgb(40, 40, 40);
+    color: white;
+    height: fit-content;
+}
+
+
+a{
+    color:white;
+    font: inherit;
+}
