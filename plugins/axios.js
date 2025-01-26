@@ -1,8 +1,13 @@
 import axios from 'axios';
 
 export default defineNuxtPlugin(nuxtApp => {
+  const config = useRuntimeConfig();
+
+ 
+
   const axiosInstance = axios.create({
-    baseURL: 'https://api.example.com', // Replace with your API base URL
+    baseURL: config.public.apiBase, // Proxy base URL
+    withCredentials: true, // Include credentials if needed
   });
 
   // You can add interceptors or configure axios instance here

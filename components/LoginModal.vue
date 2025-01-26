@@ -18,6 +18,8 @@
      const props = defineProps({ 
         title:String
     })
+
+   
 </script>
 
 <style lang="scss" scoped>

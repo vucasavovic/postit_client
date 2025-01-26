@@ -6,7 +6,7 @@
                  <TextInput label="username" name="username"/>
                  <TextInput label="email" name="email"/>
                  <TextInput label="password" name="password"/>
-                 <SimpleButton :text="action"/>
+                 <SimpleButton @click="signup()" :text="action"/>
                  <div class="redirection">
                     <p>Already have an account?</p>
                     <button type="button" class="action-button" @click="changeActionTo('login')">Login</button>
@@ -28,11 +28,23 @@
 </template>
 
 <script setup>
+const { $axios } = useNuxtApp();
  const action = ref('login')
 
  const changeActionTo = (newAction) => {
     action.value = newAction;
  }
+
+  
+ const signup  = async () => {
+    try {
+        const response = await $axios.post('/auth/signup'); // Use your API endpoint
+        
+        console.log(response.data);
+    } catch (error) {
+        console.error('Error fetching posts:', error);
+    }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/proxy": "^2.1.0",
+    "axios": "^1.7.9",
+    "http-proxy-middleware": "^3.0.3",
     "nuxt": "^3.15.2",
     "sass": "^1.83.4",
     "sass-loader": "^16.0.4",
